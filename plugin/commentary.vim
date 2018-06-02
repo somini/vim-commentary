@@ -9,7 +9,7 @@ endif
 let g:loaded_commentary = 1
 
 command! -range -bar Commentary call commentary#go(<line1>,<line2>)
-xnoremap <silent> <Plug>Commentary     :Commentary<CR>
+xnoremap <silent> <Plug>Commentary     commentary#go()
 nnoremap <expr>   <Plug>Commentary     commentary#go()
 nnoremap <expr>   <Plug>CommentaryLine commentary#go() . '_'
 onoremap <silent> <Plug>Commentary        :<C-U>call commentary#textobject(0)<CR>
